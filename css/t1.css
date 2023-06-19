@@ -1,0 +1,118 @@
+.header {
+    position: sticky;
+}
+
+
+.header .language {
+    display: flex;
+    gap: 20px;
+    justify-content: right;
+    height: 40px;
+    align-items: center;
+    padding: 0 100px;
+    background: #000;
+}
+
+.header .language img {
+    padding: 0 5px;
+}
+
+.header .language a {
+    font-size: 14px;
+    font-weight: 300;
+    color: #ddd;
+}
+
+.header .language i {
+    font-size: 18px;
+    font-weight: 400;
+    color: #eee;
+    vertical-align: 4px;
+    margin: 0 0 0 10px;
+}
+
+.header .header_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 100px;
+    background: #000;
+    color: #eee;
+}
+
+.gnb>ul {
+    display: flex;
+    gap: 40px;
+}
+
+
+.gnb a {
+    display: block;
+    white-space: nowrap;
+
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.header .header_wrap .login_area .member {
+    display: flex;
+    gap: 20px;
+}
+
+.header .header_wrap .login_area .member a {
+    font-size: 14px;
+    color: #ddd;
+    font-weight: 300;
+}
+
+
+.main_visual {
+    position: relative;
+}
+
+.main_slide {
+    overflow: hidden;
+}
+
+.main_slide .itm {
+    position: relative;
+    overflow: hidden;
+}
+
+.main_slide .itm .slide-image {
+    position: absolute;
+    inset: 0 0 0 0;
+}
+
+.main_visual .arrows {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    z-index: 998;
+    transform: translate(-50%, -50%);
+    max-width: 1900px;
+    width: 100%;
+    font-size: 80px;
+    color: #fff
+}
+
+.main_visual .arrows i {
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.6s;
+}
+
+.main_visual:hover .arrows i {
+    opacity: 0.6;
+}
+
+.main_visual .arrows .left {
+    left: -5px;
+}
+
+.main_visual .arrows .right {
+    right: -5px;
+}

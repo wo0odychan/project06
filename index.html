@@ -5,9 +5,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>T1 Shop</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <link rel="stylesheet" href="./css/t1.css">
+
+
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/ScrollToPlugin.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/TweenMax.min.js"></script>
+    <script src="./js/t1.js"></script>
+
 </head>
 
 <body>
+    <div class="wrap">
+        <!-- 헤더 -->
+        <header class="header">
+            <div class="top language">
+                <div class="kr">
+                    <a href=""><img src="./images/ko_KR_32x24.png" alt="">KR</a>
+                </div>
+                <div class="en">
+                    <a href=""><img src="./images/en_US_32x24.png" alt="">EN</a>
+                </div>
+                <div class="search">
+                    <a href=""><i class="xi-search"></i></a>
+                </div>
+            </div>
+            <div class="bottom inner header_wrap">
+
+                <h1><a href="/"><img src="./images/tilogo.png" alt=""></a></h1>
+                <nav class="gnb">
+                    <ul class="menu">
+                        <li><a href="">NEW</a></li>
+                        <li><a href="">APPAREL</a></li>
+                        <li><a href="">UNIFORM</a></li>
+                        <li><a href="">ACCESSORIES</a></li>
+                        <li><a href="">COLLECTIBLES</a></li>
+                        <li><a href="">COLLABORATION</a></li>
+                        <li><a href="">EVENT</a></li>
+                    </ul>
+                </nav>
+                <div class="login_area">
+                    <ul class="member">
+                        <li><a href="">LOGIN</a></li>
+                        <li><a href="">JOIN</a></li>
+                        <li><a href="">CART</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="main_visual">
+                <div class="main_slide swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide itm01 itm">
+                            <div class="slide-image" data-swiper-parallax='45%'></div>
+                            <div class="content">
+                                <div class="img_box">
+                                    <img src="./images/msi_pc.jpg" alt="">
+                                </div>
+                                <div class="txt left">
+                                    <strong> A LEGACY
+                                        <p>OF</p>
+                                        LEGEND
+                                    </strong>
+                                </div>
+                                <div class="txt right"><strong>2023 MSI</strong>
+                                    <p>Uniform Jersey </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide itm02 itm">
+                            <div class="slide-image" data-swiper-parallax='45%'></div>
+                            <div class="content">
+                                <div class="img_box">
+                                    <img src="./images/deca_pc.jpg" alt="">
+                                </div>
+                                <div class="txt">
+                                    <strong>FAKER X DECA<br />UNIFORM JERSEY Ltd. Ed</strong>
+                                    <p>BEAR THE THORNS, WEAR THE CROWN</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide itm03 itm">
+                            <div class="slide-image" data-swiper-parallax='45%'></div>
+                            <div class="content">
+                                <div class="img_box">
+                                    <img src="./images/animal_pc.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide itm04 itm">
+                            <div class="slide-image" data-swiper-parallax='45%'></div>
+                            <div class="content">
+                                <div class="img_box">
+                                    <img src="./images/RAZER_PC.jpg" alt="">
+                                </div>
+                                <strong></strong>
+                            </div>
+                        </div>
+                        <div class="swiper-slide itm05 itm">
+                            <div class="slide-image" data-swiper-parallax='45%'></div>
+                            <div class="content">
+                                <div class="img_box">
+                                    <img src="./images/GoalStudio_PC.jpg" alt="">
+                                </div>
+                                <strong></strong>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="arrows">
+                        <i class="xi-angle-left left"></i>
+                        <i class="xi-angle-right right"></i>
+                    </div>
+            </section>
+        </main>
+
+        <footer class="footer"></footer>
+
+
+    </div>
 
 </body>
 

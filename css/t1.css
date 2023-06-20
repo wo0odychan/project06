@@ -86,23 +86,68 @@
 }
 
 .main_visual .content {
-position: relative;}
-
-.main_visual .txt {
-position: absolute;
-top: 50%;
-left: 100px;
-font-size: 50px;
-color: #fff;
-line-height: 1.4;}
-
-.main_visual .content .right {
-margin: 0 500px 0 0 ;
+    position: relative;
+    text-shadow: 0 0 2px #44444477;
 }
 
+.main_visual .content .left {
+    position: absolute;
+    top: 10%;
+    left: 110px;
+    color: #fff;
+    line-height: 1.4;
+}
+
+.main_visual .content .left strong {
+    display: block;
+    font-size: 120px;
+    font-weight: 900;
+}
+
+.main_visual .content .left p {
+    font-size: 110px;
+    font-weight: 300;
+}
+
+.main_visual .content .right {
+    position: absolute;
+    bottom: 10%;
+    right: 110px;
+    color: #fff;
+    line-height: 1.2;
+    text-align: right;
+}
+
+.main_visual .content .right strong {
+    display: block;
+    font-size: 90px;
+    font-weight: 900;
+}
+
+.main_visual .content .right p {
+    font-size: 70px;
+    font-weight: 300;
+}
+
+.main_visual .txt {
+    position: absolute;
+    top: 20%;
+    left: 110px;
+    color: #fff;
+    line-height: 1.2;
+}
+
+
 .main_visual .txt strong {
-font: 80px;
-font-weight: 900;
+    display: block;
+    font-size: 90px;
+    font-weight: 900;
+    padding: 0 0 30px 0;
+}
+
+.main_visual .txt p {
+    font-size: 40px;
+    font-weight: 200;
 }
 
 .main_visual .arrows {
@@ -111,7 +156,7 @@ font-weight: 900;
     left: 50%;
     z-index: 998;
     transform: translate(-50%, -50%);
-    max-width: 1900px;
+    max-width: 1700px;
     width: 100%;
     font-size: 80px;
     color: #fff
@@ -126,14 +171,62 @@ font-weight: 900;
 }
 
 .main_visual:hover .arrows i {
-    opacity: 0.6;
+    opacity: 0.7;
 }
 
 .main_visual .arrows .left {
-    left: -5px;
+    left: -100px;
+}
+
+.main_visual .arrows i:hover {
+    color: #e4002b;
 }
 
 .main_visual .arrows .right {
-    right: -5px;
+    right: -100px;
 }
 
+
+.main_content {
+    padding: 100px 0;
+}
+
+.main_content .tit {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    margin: 0 0 50px 0;
+}
+
+.main_content .content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.main_content .content .content_menu {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+
+}
+
+
+.main_content .content .content_box .box {
+    margin: 30px 0;
+}
+
+.main_content .content .content_box li {
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    gap: 50px;
+    height: 0;
+    overflow: hidden;
+}
+
+
+.main_content .content .content_box li.on {
+    height: auto;
+}

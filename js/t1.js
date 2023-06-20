@@ -21,13 +21,11 @@ $(function () {
 
     const mainSlide = new Swiper('.main_slide', {
         loop: true,
-        parallax: true,
-        speed: 1000,
         autoplay: {
             delay: 4000,
             disableOnInteraction: false,
         },
-        slideActiveClass: 'on',
+
 
     });
     $('.main_visual .arrows .left').on('click', function () {
@@ -35,6 +33,14 @@ $(function () {
     });
     $('.main_visual .arrows .right').on('click', function () {
         mainSlide.slideNext();
+    });
+
+
+    $('.content_menu li').on('click', function (e) {
+        e.preventDefault();
+        let idx = $(this).index();
+        $(this).addClass('on').siblings().removeClass('on');
+        $('.content_box li').eq(idx).addClass('on').siblings().removeClass('on');
     });
 
 })

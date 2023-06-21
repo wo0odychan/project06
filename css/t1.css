@@ -1,5 +1,8 @@
 .header {
     position: sticky;
+    top: 0;
+    z-index: 1000;
+
 }
 
 
@@ -11,6 +14,7 @@
     align-items: center;
     padding: 0 100px;
     background: #000;
+
 }
 
 .header .language img {
@@ -29,7 +33,13 @@
     color: #eee;
     vertical-align: 4px;
     margin: 0 0 0 10px;
+
 }
+
+.header.on .language {
+    display: none;
+}
+
 
 .header .header_wrap {
     display: flex;
@@ -39,6 +49,17 @@
     padding: 0 100px;
     background: #000;
     color: #eee;
+    transition: 0.5s;
+}
+
+.header.on .header_wrap {
+    height: 60px;
+    background: #111;
+}
+
+.header.on h1 {
+    height: 40px;
+    width: 100px;
 }
 
 .gnb>ul {
@@ -53,6 +74,11 @@
 
     font-size: 18px;
     font-weight: 400;
+    transition: 0.5s;
+}
+
+.header.on .gnb a {
+    font-size: 16px;
 }
 
 .header .header_wrap .login_area .member {
@@ -189,44 +215,195 @@
 
 .main_content {
     padding: 100px 0;
+
 }
 
+
 .main_content .tit {
+    position: relative;
     text-align: center;
-    font-size: 40px;
+    font-size: 45px;
     font-weight: 600;
-    margin: 0 0 50px 0;
+    margin: 0 0 60px 0;
+}
+
+.main_content .tit::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    width: 60px;
+    height: 2px;
+    transform: translate(-50%, 0);
+    background: #333;
 }
 
 .main_content .content {
     display: flex;
     flex-direction: column;
-    max-width: 1200px;
+    max-width: 1700px;
     margin: 0 auto;
     padding: 0 15px;
 }
+
 
 .main_content .content .content_menu {
     display: flex;
     gap: 50px;
     justify-content: center;
+    margin: 0 0 50px 0;
+}
 
+.main_content .content .content_menu li a {
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.main_content .content .content_menu li.on a {
+    color: #e4002b;
+}
+
+.main_content .content_box {
+    opacity: 0;
+    transform: translate(0, 100px);
+    transition: 0.8s;
+}
+
+.main_content.on .content_box {
+    opacity: 1;
+    transform: translate(0, 0);
 }
 
 
-.main_content .content .content_box .box {
-    margin: 30px 0;
+.main_content .content .content_box img {
+    height: 250px;
+    width: 320px;
 }
 
 .main_content .content .content_box li {
-    display: grid;
-    grid-template-columns: repeat(2, 500px);
+    display: flex;
     gap: 50px;
+    justify-content: center;
     height: 0;
     overflow: hidden;
 }
 
 
 .main_content .content .content_box li.on {
-    height: auto;
+    height: 100%;
+}
+
+
+.main_content .content .content_box figure {
+    text-align: center;
+}
+
+.main_content .content .cart {
+    height: 25px;
+    transform: translate(0, -20%);
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.main_content .content .content_box figure:hover .cart {
+    transform: translate(0, -80%);
+    opacity: 1;
+}
+
+.main_content .content .cart i {
+    font-size: 20px;
+    color: #777;
+    background: #f8f8f8;
+    padding: 5px 6px 5px 6px;
+}
+
+.main_content .content .content_box .txt {
+    height: 90px;
+    width: 350px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+.main_official {
+    padding: 100px 0;
+    background: linear-gradient(#555 70%, #fff 30%);
+
+}
+
+.main_official .content {
+    opacity: 0;
+    transform: translate(0, 100px);
+    transition: 0.8s;
+}
+
+.main_official.on .content {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.main_official .tit {
+    position: relative;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 500;
+    margin: 0 0 80px 0;
+    color: #f9f9f9;
+}
+
+.main_official .tit::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    width: 60px;
+    height: 2px;
+    transform: translate(-50%, 0);
+    background: #fff;
+}
+
+.main_official .content {
+    display: flex;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.main_official .content img {
+    height: 435px;
+}
+
+.main_official .content .txt {
+    position: relative;
+    background: #fff;
+    width: 635px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0 80px 40px;
+}
+
+.main_official .content .txt h3,
+strong {
+    font-size: 35px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+}
+
+.main_official .content .txt strong {
+    color: #e4002b;
+    margin: 0 0 60px 0;
+}
+
+.main_official .content .txt p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.main_official .content .txt a {
+    position: absolute;
+    bottom: 15%;
+    transform: translate(0, -50%);
+    font-size: 17px;
+    color: #fff;
+    padding: 10px 20px;
+    background: #e4002b;
+    border-radius: 20px;
 }

@@ -8,8 +8,8 @@ $(function () {
 
     $(window).on('scroll', function () {
         let sct = $(window).scrollTop();
-        $('._se_').each(function () {
-            if (sct + $(window).innerHeight() - 200 > $(this).offset().top) {
+        $('._move_').each(function () {
+            if (sct + $(window).innerHeight() - 300 > $(this).offset().top) {
                 $(this).addClass('on')
             } else {
                 $(this).removeClass('on')

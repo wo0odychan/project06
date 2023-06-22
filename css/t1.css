@@ -222,16 +222,16 @@
 .main_content .tit {
     position: relative;
     text-align: center;
-    font-size: 45px;
-    font-weight: 600;
-    margin: 0 0 60px 0;
+    font-size: 40px;
+    font-weight: 500;
+    margin: 0 0 80px 0;
 }
 
 .main_content .tit::after {
     content: "";
     position: absolute;
     bottom: -20px;
-    width: 60px;
+    width: 50px;
     height: 2px;
     transform: translate(-50%, 0);
     background: #333;
@@ -250,16 +250,22 @@
     display: flex;
     gap: 50px;
     justify-content: center;
-    margin: 0 0 50px 0;
+    margin: 0 0 60px 0;
 }
 
 .main_content .content .content_menu li a {
-    font-size: 20px;
+    font-size: 19px;
     transition: 0.3s;
+    border: 1px solid #444;
+    padding: 3px 15px;
+    border-radius: 20px;
 }
 
 .main_content .content .content_menu li.on a {
     color: #e4002b;
+    border: 1px solid #e4002b;
+    border-radius: 15px;
+    padding: 7px 25px;
 }
 
 .main_content .content_box {
@@ -324,9 +330,11 @@
 }
 
 
+
+
 .main_official {
     padding: 100px 0;
-    background: linear-gradient(#555 70%, #fff 30%);
+    background: linear-gradient(#555 80%, #fff 20%);
 
 }
 
@@ -344,8 +352,8 @@
 .main_official .tit {
     position: relative;
     text-align: center;
-    font-size: 45px;
-    font-weight: 500;
+    font-size: 40px;
+    font-weight: 400;
     margin: 0 0 80px 0;
     color: #f9f9f9;
 }
@@ -354,7 +362,7 @@
     content: "";
     position: absolute;
     bottom: -20px;
-    width: 60px;
+    width: 50px;
     height: 2px;
     transform: translate(-50%, 0);
     background: #fff;
@@ -406,4 +414,62 @@ strong {
     padding: 10px 20px;
     background: #e4002b;
     border-radius: 20px;
+}
+
+.footer {
+    background: #222 url(../images/tilogo.png) no-repeat calc(100% - 100px) calc(100% - 50px);
+    padding: 30px 100px;
+    color: #f9f9f9;
+    z-index: 2;
+}
+
+.footer .content .top {
+    margin: 0 0 30px 0;
+}
+
+.footer .content .top .customer {
+    display: flex;
+    gap: 30px;
+    margin: 0 0 15px 0;
+    font-size: 17px;
+}
+
+.footer .content .top .customer span {
+    font-weight: 600;
+}
+
+.footer .content .top p {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+
+.footer .content .bottom .address li {
+    padding: 6px 0;
+}
+
+.footer .content .bottom .address strong {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.to_top {
+    position: fixed;
+    bottom: 120px;
+    right: 100px;
+
+}
+
+.to_top i {
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.to_top i:hover {
+    background: #e4002b;
 }

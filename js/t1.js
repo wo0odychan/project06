@@ -43,4 +43,8 @@ $(function () {
         $('.content_box li').eq(idx).addClass('on').siblings().removeClass('on');
     });
 
+
+    $('.to_top').on('click', function () {
+        $('html, body').animate({ scrollTop: 0 }, 1000)
+    });
 })

@@ -50,6 +50,7 @@
     background: #000;
     color: #eee;
     transition: 0.5s;
+    border-bottom: 1px solid #f9f9f9;
 }
 
 .header.on .header_wrap {
@@ -182,7 +183,7 @@
     left: 50%;
     z-index: 998;
     transform: translate(-50%, -50%);
-    max-width: 1700px;
+    max-width: 1670px;
     width: 100%;
     font-size: 80px;
     color: #fff
@@ -416,6 +417,71 @@ strong {
     border-radius: 20px;
 }
 
+
+.main_collabo {
+    padding: 100px 0;
+}
+
+.main_collabo .tit {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin: 0 0 80px 0;
+}
+
+.main_collabo .tit::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    width: 50px;
+    height: 2px;
+    transform: translate(-50%, 0);
+    background: #333;
+}
+
+.main_collabo .content {
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    justify-content: center;
+
+    opacity: 0;
+    transform: translate(0, 100px);
+    transition: 0.8s;
+}
+
+.main_collabo.on .content {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.main_collabo .content figure {
+    position: relative;
+
+}
+
+
+.main_collabo .content .txt {
+    font-size: 30px;
+    font-weight: 300;
+    margin: 20px 0 0 0;
+    justify-content: space-between;
+}
+
+.bg {
+    padding: 100px 0 0 0;
+    filter: grayscale(60%);
+}
+
+.bg .content {
+    height: 500px;
+    background-image: url(../images/GoalStudio_PC.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 .footer {
     background: #222 url(../images/tilogo.png) no-repeat calc(100% - 100px) calc(100% - 50px);
     padding: 30px 100px;
@@ -424,33 +490,54 @@ strong {
 }
 
 .footer .content .top {
-    margin: 0 0 30px 0;
+    margin: 0 0 25px 0;
 }
 
 .footer .content .top .customer {
     display: flex;
     gap: 30px;
     margin: 0 0 15px 0;
-    font-size: 17px;
+    font-size: 15px;
 }
 
 .footer .content .top .customer span {
     font-weight: 600;
 }
 
-.footer .content .top p {
+.footer .content .top .cs {
     font-size: 25px;
     font-weight: 500;
 }
 
+.footer .content .bottom {
+    width: 600px;
+}
+
+.footer .content .bottom .address ul {
+    display: flex;
+}
 
 .footer .content .bottom .address li {
+    font-size: 15px;
     padding: 6px 0;
 }
 
 .footer .content .bottom .address strong {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.footer .bottom ul span {
+    font-size: 0;
+    padding: 0 8px;
+}
+
+.footer .bottom ul span::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background: #666;
 }
 
 .to_top {

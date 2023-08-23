@@ -43,6 +43,15 @@ $(function () {
         $('.content_box li').eq(idx).addClass('on').siblings().removeClass('on');
     });
 
+    $('.mobile_btn').on('click', function () {
+        $(this).toggleClass('on');
+        $('.gnb').toggleClass('on');
+
+    });
+    $('.gnb').on('wheel touchmove', function (e) {
+        e.preventDefault();
+    });
+
 
     $('.to_top').on('click', function () {
         $('html, body').animate({ scrollTop: 0 }, 1000)
